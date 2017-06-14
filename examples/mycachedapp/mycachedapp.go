@@ -1,30 +1,10 @@
-cache2go
-========
-
-Concurrency-safe golang caching library with expiration capabilities.
-
-## Installation
-
-Make sure you have a working Go environment. See the [install instructions](http://golang.org/doc/install.html).
-
-To install cache2go, simply run:
-
-    go get github.com/muesli/cache2go
-
-To compile it from source:
-
-    cd $GOPATH/src/github.com/muesli/cache2go
-    go get -u -v
-    go build && go test -v
-
-## Example
-```go
 package main
 
 import (
-	"github.com/muesli/cache2go"
 	"fmt"
 	"time"
+
+	"github.com/muesli/cache2go"
 )
 
 // Keys & values in cache2go can be off arbitrary types, e.g. a struct.
@@ -71,19 +51,3 @@ func main() {
 	// And wipe the entire cache table.
 	cache.Flush()
 }
-```
-
-To run this example, go to examples/mycachedapp/ and run:
-
-    go run mycachedapp.go
-
-You can find a [few more examples here](https://github.com/muesli/cache2go/tree/master/examples).
-Also see our test-cases in cache_test.go for further working examples.
-
-## Development
-
-API docs can be found [here](http://godoc.org/github.com/muesli/cache2go).
-
-[![Build Status](https://secure.travis-ci.org/muesli/cache2go.png)](http://travis-ci.org/muesli/cache2go)
-[![Coverage Status](https://coveralls.io/repos/github/muesli/cache2go/badge.svg?branch=master)](https://coveralls.io/github/muesli/cache2go?branch=master)
-[![Go ReportCard](http://goreportcard.com/badge/muesli/cache2go)](http://goreportcard.com/report/muesli/cache2go)
